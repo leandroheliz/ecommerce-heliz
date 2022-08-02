@@ -1,5 +1,5 @@
 import { ThemeProvider } from 'styled-components';
-import Store from './src/Store';
+import Store from './src/MyStore';
 import { theme } from './src/Theme';
 import { useFonts as OswaldFont, Oswald_400Regular } from '@expo-google-fonts/oswald';
 import { useFonts as LatoFont, Lato_400Regular } from '@expo-google-fonts/lato';

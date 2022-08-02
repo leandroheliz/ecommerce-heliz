@@ -18,7 +18,8 @@ export const StoreInfo = ({ store = {} }) => {
   const ratingArray = Array.from(new Array(Math.floor(rating)));
 
   return (
-    <StoreCard elevation={5}>
+    <StoreCard elevation={5}
+    >
       <StoreCardCover key={name} source={{ uri: photos[0] }} />
       <Info>
         <Title>{name}</Title>
