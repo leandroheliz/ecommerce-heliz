@@ -1,6 +1,6 @@
+import React from 'react'
 import HomeScreen1 from '../Screens/HomeScreen1'
 import HomeScreen2 from '../Screens/HomeScreen2'
-import React from 'react'
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 export default function HomeStackScreen() {

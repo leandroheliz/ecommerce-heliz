@@ -1,10 +1,13 @@
-import { Text, View } from 'react-native'
+import { ScrollView, Text } from 'react-native'
 import React from 'react'
+import { SafeArea } from './Styles'
 
 export default function Cart() {
   return (
-    <View>
+    <SafeArea>
+      <ScrollView>
       <Text>Cart</Text>
-    </View>
+      </ScrollView>
+    </SafeArea>
   )
 }

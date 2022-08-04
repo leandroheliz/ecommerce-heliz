@@ -1,5 +1,5 @@
 import { ThemeProvider } from 'styled-components';
-import Store from './src/MyStore';
+import Main from './src/Main';
 import { theme } from './src/Theme';
 import { useFonts as OswaldFont, Oswald_400Regular } from '@expo-google-fonts/oswald';
 import { useFonts as LatoFont, Lato_400Regular } from '@expo-google-fonts/lato';
@@ -20,7 +20,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Store />
+      <Main />
     </ThemeProvider>
   );
 }

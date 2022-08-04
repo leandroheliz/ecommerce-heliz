@@ -3,19 +3,22 @@ import Categories from "./Screens/Categories";
 import HomeStackScreen from "./Navigation/HomeStackScreen";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { NavigationContainer } from "@react-navigation/native";
-import Profile from "./Screens/Profile";
 import React from "react";
 import SettingsStackScreen from "./Navigation/SettingsStackScreen";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-export default function Tabs() {
+export default function Main() {
 
   const Tab = createBottomTabNavigator()
 
   return (
     <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen
+         <Tab.Navigator
+      screenOptions={{
+        headerShown: false,
+        tabBarShowLabel: false,
+    }}>
+      <Tab.Screen
           name="Home"
           component={HomeStackScreen}
           options={{
@@ -25,7 +28,16 @@ export default function Tabs() {
             ),
           }}
         />
-        <Tab.Screen name="Categories" component={Categories} />
+           <Tab.Screen
+          name="Categories"
+          component={Categories}
+          options={{
+            tabBarLabel: '',
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons name="store" color={color} size={size} />
+            ),
+          }}
+        />
         <Tab.Screen
           name="Cart"
           component={Cart}
@@ -36,8 +48,16 @@ export default function Tabs() {
             ),
           }}
         />
-        <Tab.Screen name="Profile" component={Profile} />
-        <Tab.Screen name="Settings" component={SettingsStackScreen} />
+          <Tab.Screen
+          name="Settings"
+          component={SettingsStackScreen}
+          options={{
+            tabBarLabel: '',
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons name="cog-outline" color={color} size={size} />
+            ),
+          }}
+        />
       </Tab.Navigator>
     </NavigationContainer>
   )

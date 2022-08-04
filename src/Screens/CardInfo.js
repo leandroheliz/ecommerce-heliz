@@ -5,7 +5,7 @@ import { StoreCard, StoreCardCover, Title, Address, Info, Rating, Section, Secti
    //Icon
    } from './Styles'
 
-export const StoreInfo = ({ store = {} }) => {
+export const CardInfo = ({ store = {} }) => {
   const {
     name = "Camelia Blanco & Más",
     icon,

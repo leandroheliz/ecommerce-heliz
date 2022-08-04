@@ -1,11 +1,13 @@
-import { Text, View } from 'react-native'
-
 import React from 'react'
+import { ScrollView, Text } from 'react-native'
+import { SafeArea } from './Styles'
 
 export default function Categories() {
   return (
-    <View>
+    <SafeArea>
+      <ScrollView>
       <Text>Categories</Text>
-    </View>
+      </ScrollView>
+    </SafeArea>
   )
 }
